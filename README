@@ -1,0 +1,92 @@
+# SonarQube Implementation
+
+This project integrates **SonarQube** for continuous code quality inspection. It helps in identifying bugs, vulnerabilities, and code smells, ensuring your project maintains high standards.
+
+## Prerequisites
+
+Before setting up SonarQube, ensure the following are installed and configured:
+
+- **SonarQube** Server (Local)
+- **Java 11+** (for SonarQube server)
+- **Git** (for version control)
+
+## Setting Up SonarQube
+
+1. **Install SonarQube**
+
+   - [Download SonarQube](https://www.sonarqube.org/downloads/) and extract it to your local machine.
+   
+
+2. **Start SonarQube Server**
+
+   Navigate to the SonarQube installation folder and run:
+   ```bash
+
+   ./bin/linux-x86-64/sonar.sh start
+
+
+
+## without docker
+#### configuation for react 
+
+
+
+## package: 
+
+1. sonarqube-scanner 
+2. sonar-scanner
+
+## make a file in root project
+
+    - sonar-project.properties 
+            
+            sonar.projectKey=formbuilder
+            sonar.projectName=formbuilder
+            sonar.projectVersion=1.0.0
+            sonar.sourceEncoding=UTF-8
+            sonar.language=js
+            sonar.sources=src
+            sonar.exclusions=node_modules/**,coverage/**
+            sonar.host.url=http://localhost:9000
+            sonar.token=sqp_f3ece62c2a7c6b7620b6000c77021cd5c9ecb0a7
+
+## package.json
+    "scripts": {
+        "sonar": "sonar-scanner"
+    }
+
+## cammand to run 
+    npm run sonar
+
+
+###### configuration with nodejs project
+
+## package: 
+
+1. sonarqube-scanner
+
+## make a file in root project
+
+    - sonar-project.properties 
+            
+            sonar.projectKey=app
+            sonar.projectName=app
+            sonar.projectVersion=1.0
+            sonar.sources=.
+            sonar.language=js
+            sonar.sourceEncoding=UTF-8
+            sonar.exclusions=node_modules/**,coverage/**
+            sonar.host.url=https://localhost:9000
+            sonar.login=sqp_68ffbac3d1e33a833c7b22647c88f96f603c3d14
+
+
+## package.json
+    "scripts": {
+        "sonar": "sonar-scanner"
+    }
+
+## cammand to run 
+    npm run sonar
+
+######
+the token need to generate from the website

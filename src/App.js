@@ -7,6 +7,7 @@ import Crud from './Crud';
 import DynamicForm from './DynamicForm.js';
 import DragAndDropForm from './Drag-and-drop.js'
 import FormBuilderComponent from './newform.js'
+import FormCloneExample from './FormClone.js';
 
 function App() {
   return (
@@ -17,11 +18,13 @@ function App() {
         {/* <FormBuilder /> */}
         {/* <FormBuilderComponent /> */}
         <DragAndDropForm />
+        {/* <FormCloneExample /> */}
+     
         {/* <Crud /> */}
       {/* </div> */}
 
 
-    // </DndProvider>
+    </DndProvider>
   );
 }
 
